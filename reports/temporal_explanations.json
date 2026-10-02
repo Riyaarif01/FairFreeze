@@ -1,0 +1,106 @@
+[
+  {
+    "account_id": "IBM_0028370_80A734A70",
+    "example_type": "highest_ranked_positive",
+    "model": "RF_baseline",
+    "baseline": 0.18356949986334717,
+    "score": 0.574659788156865,
+    "review_flag": false,
+    "proposed_hold_amount": null,
+    "groups": [
+      {
+        "group": "structure",
+        "features": [
+          "fan_ratio_structural",
+          "fan_ratio_volume",
+          "passthrough_distance_7d",
+          "passthrough_has_signal"
+        ],
+        "contribution": 0.09859663974885655
+      },
+      {
+        "group": "amount_behavior",
+        "features": [
+          "amount_mean",
+          "amount_std",
+          "spike_ratio",
+          "round_amount_fraction"
+        ],
+        "contribution": 0.2924936485446613
+      },
+      {
+        "group": "graph",
+        "features": [
+          "hub_score",
+          "authority_score"
+        ],
+        "contribution": 9.25185853854297e-18
+      }
+    ],
+    "observed_features": {
+      "fan_ratio_structural": 1.0,
+      "fan_ratio_volume": 1.0,
+      "amount_mean": 353746.11,
+      "amount_std": 0.0,
+      "spike_ratio": 1.0,
+      "round_amount_fraction": 0.0,
+      "passthrough_distance_7d": null,
+      "passthrough_has_signal": 0.0,
+      "hub_score": 4.975366880618051e-30,
+      "authority_score": 0.0
+    },
+    "method": "Exact empirical interventional Shapley for feature GROUPS, not individual features; 24 HI-training background accounts. Explanations describe scores, not criminal intent."
+  },
+  {
+    "account_id": "IBM_0123651_808EBDD20",
+    "example_type": "highest_ranked_negative",
+    "model": "RF_baseline",
+    "baseline": 0.18356949986334717,
+    "score": 0.6295041639927906,
+    "review_flag": false,
+    "proposed_hold_amount": null,
+    "groups": [
+      {
+        "group": "structure",
+        "features": [
+          "fan_ratio_structural",
+          "fan_ratio_volume",
+          "passthrough_distance_7d",
+          "passthrough_has_signal"
+        ],
+        "contribution": 0.1630552766620289
+      },
+      {
+        "group": "amount_behavior",
+        "features": [
+          "amount_mean",
+          "amount_std",
+          "spike_ratio",
+          "round_amount_fraction"
+        ],
+        "contribution": 0.2828793874674145
+      },
+      {
+        "group": "graph",
+        "features": [
+          "hub_score",
+          "authority_score"
+        ],
+        "contribution": 5.551115123125783e-17
+      }
+    ],
+    "observed_features": {
+      "fan_ratio_structural": 0.6666666666666666,
+      "fan_ratio_volume": 0.9,
+      "amount_mean": 110375.22,
+      "amount_std": 144649.6338701062,
+      "spike_ratio": 2.7459212312328796,
+      "round_amount_fraction": 0.0,
+      "passthrough_distance_7d": 1.7852908167853863,
+      "passthrough_has_signal": 1.0,
+      "hub_score": 7.98780962332642e-27,
+      "authority_score": 9.82187815387908e-27
+    },
+    "method": "Exact empirical interventional Shapley for feature GROUPS, not individual features; 24 HI-training background accounts. Explanations describe scores, not criminal intent."
+  }
+]

@@ -25,3 +25,11 @@ Flags request human review. The snapshot has no verified complaint seed, opening
 ## Remaining work
 
 Independent generators with legitimate large/round transfers and lower-value fraud; chronological evaluation with as-of graph/features; complaint-seeded time-respecting paths; validated mixed-funds accounting; bounded short cycles; independently adjudicated real-case labels; jurisdiction-specific legal review. No real-case accuracy, deployment readiness or court acceptance is claimed.
+
+## Version 2 acceptance result
+
+Independent IBM synthetic AML data was downloaded and evaluated. Native chronological RF AP was 0.054 and LR 0.006; neither met the 80% validation precision target with five flags. Both abstain under that policy. Complaint-seeded tracing is separately tested under a declared proportional allocation rule, not established legal ownership. The detection gate fails. No deployment acceptance or court validation is claimed.
+
+## Version 3 temporal experiment
+
+Temporal augmentation failed to improve HI validation average precision. The baseline selected before LI test inspection achieved AP 0.0040 and 1/100 top-ranked catches on LI (63 positives total). No candidate attained the validation precision target. Temporal path counts are bounded, truncation exposed; no criminal intent or trace allocation follows from a path. Detailed experiment and group-attribution limitations are in TEMPORAL.md.

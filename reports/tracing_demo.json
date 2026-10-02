@@ -1,0 +1,94 @@
+{
+  "complaint": {
+    "complaint_id": "SIM_COMPLAINT",
+    "authority_reference": "SIM_AUTHORITY",
+    "seed_transaction_id": "DEMO_T1",
+    "disputed_amount": 1000,
+    "currency": "INR"
+  },
+  "cutoff": null,
+  "method": "Chronological proportional mixing rounded to currency cents",
+  "limitations": [
+    "Allocation is a simulation assumption, not proof of legal ownership.",
+    "Complete opening balances and all ledger movements required.",
+    "Equal-time transfers use supplied input order; unresolved real ordering requires review.",
+    "No automatic hold, criminal intent inference or bank instruction."
+  ],
+  "events": [
+    {
+      "transaction_id": "DEMO_T1",
+      "timestamp": "2026-01-01T10:00:00+00:00",
+      "sender": "VICTIM",
+      "receiver": "A",
+      "transfer_amount": "1000.00",
+      "allocated_disputed_amount": "1000.00",
+      "currency": "INR",
+      "source": "complaint_seed"
+    },
+    {
+      "transaction_id": "DEMO_T2",
+      "timestamp": "2026-01-01T11:00:00+00:00",
+      "sender": "A",
+      "receiver": "B",
+      "transfer_amount": "800.00",
+      "allocated_disputed_amount": "400.00",
+      "currency": "INR",
+      "source": "proportional_mixing_assumption"
+    },
+    {
+      "transaction_id": "DEMO_T3",
+      "timestamp": "2026-01-01T12:00:00+00:00",
+      "sender": "B",
+      "receiver": "C",
+      "transfer_amount": "600.00",
+      "allocated_disputed_amount": "300.00",
+      "currency": "INR",
+      "source": "proportional_mixing_assumption"
+    }
+  ],
+  "accounts": [
+    {
+      "account_id": "A",
+      "balance": "1200.00",
+      "simulated_disputed_exposure": "600.00",
+      "currency": "INR",
+      "proposed_hold_amount": null
+    },
+    {
+      "account_id": "B",
+      "balance": "200.00",
+      "simulated_disputed_exposure": "100.00",
+      "currency": "INR",
+      "proposed_hold_amount": null
+    },
+    {
+      "account_id": "C",
+      "balance": "600.00",
+      "simulated_disputed_exposure": "300.00",
+      "currency": "INR",
+      "proposed_hold_amount": null
+    }
+  ],
+  "total_allocated": "1000.00",
+  "seed_disputed_amount": "1000.00",
+  "review_example": {
+    "account_id": "A",
+    "reviewer": "SIM_REVIEWER",
+    "authority_reference": "SIM_AUTHORITY",
+    "verified_disputed_amount": "600.00",
+    "proposed_amount_limited_hold": "600.00",
+    "remaining_available": "600.00",
+    "evidence": [
+      {
+        "account_id": "A",
+        "claim_id": "SIM_COMPLAINT",
+        "transaction_ref": "DEMO_T1",
+        "amount": 600,
+        "verified": true
+      }
+    ],
+    "status": "Draft for authorized human review; no bank action",
+    "assumption": "Reviewer verified non-overlapping allocations and current balance; model score is not used.",
+    "provenance": "Synthetic demonstration of externally confirmed allocation; not inferred approval from trace output."
+  }
+}

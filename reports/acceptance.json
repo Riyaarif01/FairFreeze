@@ -1,0 +1,25 @@
+{
+  "release": "4.0-research",
+  "status": "NOT_ACCEPTED_FOR_OPERATIONAL_FREEZING",
+  "checks": {
+    "unit_tests": {
+      "passed": 24,
+      "failed": 0
+    },
+    "shap_additivity": "passed",
+    "dashboard_script_logic": "passed_in_DOM_stub",
+    "visual_browser_rendering": "not_verified",
+    "tracing_invariants": "passed_under_proportional_simulation_assumption",
+    "external_detection_precision_target": "failed",
+    "real_case_validation": "not_available",
+    "legal_authorization_validation": "not_available",
+    "temporal_label_independence": "passed",
+    "temporal_augmentation_improves_validation": "failed",
+    "fresh_LI_detection_target": "failed"
+  },
+  "permitted_use": "Research, account investigation ranking experiments and explicitly assumed complaint tracing simulations. No bank actions.",
+  "ibm_result_source": "reports/ibm_benchmark.json",
+  "temporal_result_source": "reports/temporal_benchmark.json",
+  "case_review_dashboard": "Local upload, chronological tracing, unsigned human review and JSON export; no bank action",
+  "unit_tests_passed": 32
+}

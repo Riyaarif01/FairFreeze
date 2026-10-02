@@ -4,6 +4,54 @@ Explainable synthetic fraud-chain screening with an amount-limited human review 
 
 **Research prototype:** identifies accounts for investigation. It does not establish culpability, automate freezes, or claim court-ready evidence.
 
+## Version 4: local complaint-review dashboard
+
+```bash
+python case_app.py
+```
+
+Open http://127.0.0.1:8765. Load the synthetic example or upload a case JSON using `examples/sample_case.json` as the format. Inspect chronological allocations, defer for further evidence or enter externally verified allocations, then export an unsigned decision record. The tracing engine runs on your computer; no case is saved by the server. The export includes a canonical input hash, timestamp, tracing assumptions, reviewer assertions and any capped hold draft.
+
+Verified amounts are entered separately from simulated exposure. This is a local research tool: no reviewer authentication, external evidence validation, bank execution or operational approval. Do not deploy this simple server publicly. 32 unit tests pass. See `docs/CASE_APP.md`.
+
+## Version 3: temporal matching and fresh LI holdout
+
+Added label-free forwarding-delay and amount-matching features, bounded 2–5-hop chronological paths, time-respecting cycles and explicit search-truncation flags. Tests cover order, equal-time ambiguity, cycle detection, search bounds and label independence.
+
+These additions did **not** improve validation AP: augmented RF scored 0.090 versus baseline RF 0.138. The validation-selected baseline scored AP 0.0040 on fresh LI-Small data, catching 1 of 63 positive accounts in its top 100. No candidate achieved the target validation precision; all threshold policies abstain. We retain the negative result rather than claim temporal features solve detection.
+
+```bash
+python fetch_ibm.py --variant both
+python temporal_benchmark.py --hi external_data/HI-Small_Trans.csv --li external_data/LI-Small_Trans.csv
+python dashboard.py
+```
+
+See `docs/TEMPORAL.md`, `reports/temporal_policy.json`, `reports/temporal_benchmark.json` and `reports/temporal_explanations.json`. Both sources remain synthetic; complete operational validation is not established. LI outcomes are now inspected, so future tuning needs a new holdout. 24 unit tests pass locally.
+
+## Version 2: independent benchmark and complaint tracing
+
+This release adds an actual IBM AML benchmark download and evaluation, chronological complaint-seeded proportional allocation, simulation tests, and dashboard evidence. It is a complete research workflow, **not a validated operational freezing system**.
+
+```bash
+python trace_demo.py
+python ibm_benchmark.py --download
+python dashboard.py
+```
+
+The IBM source file is approximately 476 MB. It is not included in git or this package. Its 5,078,345 transfers were audited; 189,006 same-currency Rupee transfers were retained. The test window contains 13,465 accounts and 78 positive involvement labels. The Rupee field does not establish Indian customer provenance.
+
+| Experiment | RF | LR |
+|---|---:|---:|
+| Original-model cross-generator precision | 0.51% | 0.51% |
+| Native IBM chronological test average precision | 0.054 | 0.006 |
+| 80% validation precision target with ≥5 flags | Unattainable | Unattainable |
+
+Both native policies abstain rather than claim target compliance. This is the measured final acceptance result: **detection gate fails**. IBM simulated laundering labels do not validate Indian fraud convictions, disputed fund ownership, or legal authority. See `docs/IBM_DATA.md` and `reports/ibm_benchmark.json`.
+
+The tracing engine is independently usable with an explicitly supplied complaint seed and complete opening-balance ledger. It preserves the disputed total across transfers, uses cents, applies cutoff times, rejects missing evidence and unsupported FX, and leaves hold amounts unapproved. The separate review policy accepts externally verified allocations. See `docs/TRACING.md` and `reports/tracing_demo.json`.
+
+16 unit tests passed locally, including randomized tracing conservation, chronology, cutoff handling, missing balances, duplicate IDs, currency mismatch, exact Shapley additivity and review policy checks. Dashboard script logic was checked with a DOM stub; visual rendering has not been verified in a full browser.
+
 ## Run
 
 ```bash
@@ -73,6 +121,9 @@ The stress snapshot has 20,000 independent synthetic IDs, 100,203 transactions a
 | `build_features.py` | Rebuild snapshot features from transfers |
 | `stress_test.py` | Independent seeded synthetic stress experiment |
 | `review.py` | Verified-allocation draft hold policy |
+| `tracing.py` | Complaint-seeded proportional allocation with audit |
+| `trace_case.py` | JSON case tracing CLI |
+| `ibm_benchmark.py` | Publisher dataset download and temporal benchmark |
 | `dashboard.py` | Offline HTML report generation |
 | `reports/` | Metrics, scores, explanations and dashboard |
 | `docs/MODEL_CARD.md` | Assumptions, limitations and next research |

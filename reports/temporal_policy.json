@@ -1,0 +1,79 @@
+{
+  "selected_model": "RF_baseline",
+  "selection_rule": "Highest HI validation average precision; no LI data consulted",
+  "target_precision": 0.8,
+  "min_validation_flags": 5,
+  "features": [
+    "fan_ratio_structural",
+    "fan_ratio_volume",
+    "amount_mean",
+    "amount_std",
+    "spike_ratio",
+    "round_amount_fraction",
+    "passthrough_distance_7d",
+    "passthrough_has_signal",
+    "hub_score",
+    "authority_score"
+  ],
+  "training_window": "HI Sep 1\u20133 2022",
+  "validation_window": "HI Sep 4\u20136 2022",
+  "holdout_window": "LI Sep 7\u20139 2022",
+  "validation": {
+    "RF_baseline": {
+      "average_precision": 0.13819278546835043,
+      "threshold": null,
+      "threshold_status": "target_unattainable",
+      "tp": 0,
+      "fp": 0,
+      "fn": 96,
+      "tn": 9271,
+      "flagged": 0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "RF_temporal": {
+      "average_precision": 0.09038554227668086,
+      "threshold": null,
+      "threshold_status": "target_unattainable",
+      "tp": 0,
+      "fp": 0,
+      "fn": 96,
+      "tn": 9271,
+      "flagged": 0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "RF_flow_only": {
+      "average_precision": 0.021476803797277875,
+      "threshold": null,
+      "threshold_status": "target_unattainable",
+      "tp": 0,
+      "fp": 0,
+      "fn": 96,
+      "tn": 9271,
+      "flagged": 0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "LR_temporal": {
+      "average_precision": 0.008213069954791881,
+      "threshold": null,
+      "threshold_status": "target_unattainable",
+      "tp": 0,
+      "fp": 0,
+      "fn": 96,
+      "tn": 9271,
+      "flagged": 0,
+      "precision": null,
+      "recall": 0.0
+    }
+  },
+  "search_bounds": {
+    "max_hops": 5,
+    "max_states": 100,
+    "max_branch": 12,
+    "horizon_hours": 72,
+    "amount_ratio_min": 0.2,
+    "amount_ratio_max": 1.05
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "selected_model": "RF_baseline",
+  "policy_sha256": "8249dac72eb351f5991ccea9df2c7e741c1d293e98dd618d9afabe869488d8c6",
+  "data_sha256": {
+    "HI-Small_Trans.csv": "b19d39f515523373f991b689c07e11e7b0b95c17a2c27a87d91584ae16c5b040",
+    "LI-Small_Trans.csv": "f7a9940339c78b5d1476071505b5867c0f5319640b9c4279d13f531bf965319d"
+  },
+  "train": {
+    "transactions": 77448,
+    "positive_transfers": 33,
+    "accounts": 18979,
+    "positive_accounts": 57,
+    "truncated_path_accounts": 1204
+  },
+  "validation": {
+    "transactions": 43641,
+    "positive_transfers": 64,
+    "accounts": 9367,
+    "positive_accounts": 96,
+    "truncated_path_accounts": 818
+  },
+  "holdout": {
+    "transactions": 108453,
+    "positive_transfers": 37,
+    "accounts": 24418,
+    "positive_accounts": 63,
+    "truncated_path_accounts": 2321
+  },
+  "test_results": {
+    "RF_baseline": {
+      "average_precision": 0.00402138345524765,
+      "threshold": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 63,
+      "tn": 24355,
+      "flagged": 0,
+      "precision": null,
+      "recall": 0.0,
+      "top_k": {
+        "20": {
+          "caught": 0,
+          "precision": 0.0
+        },
+        "50": {
+          "caught": 0,
+          "precision": 0.0
+        },
+        "100": {
+          "caught": 1,
+          "precision": 0.01
+        }
+      }
+    }
+  },
+  "acceptance": "No threshold-based flags permitted when validation target is unattainable.",
+  "limitations": [
+    "Both datasets come from the same IBM simulator; separate LI source is fresh to this work, not independently adjudicated banking ground truth.",
+    "HI validation outcomes have been explored previously; LI outcomes are inspected only after policy selection; reruns reproduce the fixed policy rather than tune it.",
+    "Rupee single-currency subset discards other-currency context.",
+    "Window-end retrospective features, not transaction-time prediction.",
+    "Nearest-incoming matching is heuristic; paths and cycles do not establish disputed fund ownership.",
+    "Search is capped and truncation reported; path counts are not exhaustive.",
+    "One source/window holdout with rare positives; no real-world deployment claim."
+  ]
+}

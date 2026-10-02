@@ -65,3 +65,22 @@ def exact_shap(model,row,background):
             phi[j]+=w*(values[mask|(1<<j)]-values[mask])
     if not np.isclose(values[0]+phi.sum(),values[-1],atol=1e-8):raise AssertionError('Shapley additivity failed')
     return float(values[0]),phi,float(values[-1])
+
+def grouped_shap(model,row,background,groups):
+    """Exact interventional Shapley over a complete partition of feature indices."""
+    row=np.asarray(row);bg=np.asarray(background);d=len(groups)
+    flat=[i for g in groups for i in g]
+    if sorted(flat)!=list(range(len(row))):raise ValueError('Groups must partition features exactly once')
+    values=[]
+    for mask in range(2**d):
+        samples=bg.copy()
+        for j,g in enumerate(groups):
+            if mask&(1<<j):samples[:,g]=row[g]
+        values.append(model.predict_proba(samples)[:,1].mean())
+    phi=np.zeros(d)
+    for j in range(d):
+        for mask in range(2**d):
+            if mask&(1<<j):continue
+            k=mask.bit_count();phi[j]+=(values[mask|(1<<j)]-values[mask])/(d*math.comb(d-1,k))
+    if not np.isclose(values[0]+phi.sum(),values[-1],atol=1e-8):raise AssertionError('Grouped Shapley additivity failed')
+    return float(values[0]),phi,float(values[-1])
