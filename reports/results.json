@@ -1,0 +1,143 @@
+{
+  "seed": 42,
+  "target_precision": 0.8,
+  "min_inner_flags": 5,
+  "accounts": 20000,
+  "positives": 72,
+  "chain_components": 16,
+  "python": "3.12.14",
+  "sklearn": "1.8.0",
+  "sha256": {
+    "accounts.csv": "a6c93af6ee97e1da32cfb2399f2912c526a509c1fa2c0f557cdefaf997642168",
+    "transactions.csv": "4ee2122dbcef5645f36618a37d891da649f2843cd98577e0ac5e82021d6a7b80"
+  },
+  "metrics": {
+    "RF": {
+      "mean_fold_AP": 0.42121537248791163,
+      "min_fold_AP": 0.20490749998873214,
+      "max_fold_AP": 0.5997392391840628,
+      "pooled_AP": 0.39421820611629566,
+      "top_k": {
+        "20": {
+          "caught": 16,
+          "precision": 0.8
+        },
+        "50": {
+          "caught": 25,
+          "precision": 0.5
+        },
+        "100": {
+          "caught": 37,
+          "precision": 0.37
+        }
+      },
+      "tp": 7,
+      "fp": 4,
+      "fn": 65,
+      "tn": 19924,
+      "flagged": 11,
+      "precision": 0.6363636363636364,
+      "recall": 0.09722222222222222
+    },
+    "RF_no_round": {
+      "mean_fold_AP": 0.39383323981870544,
+      "min_fold_AP": 0.22529501611900896,
+      "max_fold_AP": 0.526269976321176,
+      "pooled_AP": 0.3656222638487061,
+      "top_k": {
+        "20": {
+          "caught": 15,
+          "precision": 0.75
+        },
+        "50": {
+          "caught": 23,
+          "precision": 0.46
+        },
+        "100": {
+          "caught": 34,
+          "precision": 0.34
+        }
+      },
+      "tp": 10,
+      "fp": 7,
+      "fn": 62,
+      "tn": 19921,
+      "flagged": 17,
+      "precision": 0.5882352941176471,
+      "recall": 0.1388888888888889
+    },
+    "RF_no_amount_or_HITS": {
+      "mean_fold_AP": 0.01102246570718916,
+      "min_fold_AP": 0.0034781820935123014,
+      "max_fold_AP": 0.03448410883479243,
+      "pooled_AP": 0.005458819101709501,
+      "top_k": {
+        "20": {
+          "caught": 0,
+          "precision": 0.0
+        },
+        "50": {
+          "caught": 0,
+          "precision": 0.0
+        },
+        "100": {
+          "caught": 2,
+          "precision": 0.02
+        }
+      },
+      "tp": 0,
+      "fp": 0,
+      "fn": 72,
+      "tn": 19928,
+      "flagged": 0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "LR": {
+      "mean_fold_AP": 0.4334912440591456,
+      "min_fold_AP": 0.3421177007701136,
+      "max_fold_AP": 0.5284625911005176,
+      "pooled_AP": 0.3829153992318156,
+      "top_k": {
+        "20": {
+          "caught": 17,
+          "precision": 0.85
+        },
+        "50": {
+          "caught": 27,
+          "precision": 0.54
+        },
+        "100": {
+          "caught": 36,
+          "precision": 0.36
+        }
+      },
+      "tp": 20,
+      "fp": 7,
+      "fn": 52,
+      "tn": 19921,
+      "flagged": 27,
+      "precision": 0.7407407407407407,
+      "recall": 0.2777777777777778
+    }
+  },
+  "sensitivity": [
+    {
+      "scenario": "smaller_positive_amounts",
+      "accounts": 14,
+      "mean_score_before": 0.47277623068213775,
+      "mean_score_after": 0.030732496971454793,
+      "average_precision_after": 0.004444240113924015,
+      "limitation": "Account-level sensitivity only; graph and flow features fixed; not a regenerated transaction dataset."
+    },
+    {
+      "scenario": "larger_negative_amounts",
+      "accounts": 3986,
+      "mean_score_before": 0.03222414007642386,
+      "mean_score_after": 0.34248461227178023,
+      "average_precision_after": 0.008206673976277369,
+      "limitation": "Account-level sensitivity only; graph and flow features fixed; not a regenerated transaction dataset."
+    }
+  ],
+  "threshold_policy": "Inner grouped OOF threshold maximizes recall at target precision; outer fold remains untouched. No fixed deployment threshold established."
+}

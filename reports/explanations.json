@@ -1,0 +1,736 @@
+[
+  {
+    "account_id": "ACC_07491",
+    "example_type": "true_positive",
+    "outer_fold": 5,
+    "score": 0.9187731571164349,
+    "baseline": 0.015403947347113825,
+    "review_flag": true,
+    "threshold": 0.8788433777323877,
+    "background_size": 24,
+    "contributions": [
+      {
+        "feature": "amount_std",
+        "value": 21525.981395951887,
+        "contribution": 0.43372415784421386
+      },
+      {
+        "feature": "amount_mean",
+        "value": 11780.323333333334,
+        "contribution": 0.30297976173622776
+      },
+      {
+        "feature": "spike_ratio",
+        "value": 4.678553248538453,
+        "contribution": 0.10071166343477356
+      },
+      {
+        "feature": "fan_ratio_volume",
+        "value": 1.2,
+        "contribution": 0.025965078626610304
+      },
+      {
+        "feature": "fan_ratio_structural",
+        "value": 1.2,
+        "contribution": 0.021269498348233634
+      },
+      {
+        "feature": "passthrough_distance_7d",
+        "value": 0.2179617889740517,
+        "contribution": 0.013376989246931186
+      },
+      {
+        "feature": "passthrough_has_signal",
+        "value": 1.0,
+        "contribution": 0.005342060532330736
+      },
+      {
+        "feature": "round_amount_fraction",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "hub_score",
+        "value": 3.617279007825956e-13,
+        "contribution": 0.0
+      },
+      {
+        "feature": "authority_score",
+        "value": 1.5139925983871833e-13,
+        "contribution": 0.0
+      }
+    ],
+    "transactions": [
+      {
+        "sender_account": "ACC_07491",
+        "receiver_account": "ACC_03592",
+        "amount": 212.91,
+        "timestamp": "2026-05-22 19:39:00",
+        "transaction_ref": "SYNTH_ROW_1432"
+      },
+      {
+        "sender_account": "ACC_05054",
+        "receiver_account": "ACC_07491",
+        "amount": 767.6,
+        "timestamp": "2026-05-16 08:13:00",
+        "transaction_ref": "SYNTH_ROW_2818"
+      },
+      {
+        "sender_account": "ACC_19674",
+        "receiver_account": "ACC_07491",
+        "amount": 3085.29,
+        "timestamp": "2026-05-11 11:46:00",
+        "transaction_ref": "SYNTH_ROW_18328"
+      },
+      {
+        "sender_account": "ACC_14698",
+        "receiver_account": "ACC_07491",
+        "amount": 336.88,
+        "timestamp": "2026-05-17 21:09:00",
+        "transaction_ref": "SYNTH_ROW_22570"
+      },
+      {
+        "sender_account": "ACC_07491",
+        "receiver_account": "ACC_05095",
+        "amount": 292.48,
+        "timestamp": "2026-05-17 15:23:00",
+        "transaction_ref": "SYNTH_ROW_38079"
+      },
+      {
+        "sender_account": "ACC_07491",
+        "receiver_account": "ACC_11919",
+        "amount": 125.73,
+        "timestamp": "2026-05-08 17:10:00",
+        "transaction_ref": "SYNTH_ROW_63561"
+      },
+      {
+        "sender_account": "ACC_07491",
+        "receiver_account": "ACC_15459",
+        "amount": 7186.37,
+        "timestamp": "2026-05-28 19:09:00",
+        "transaction_ref": "SYNTH_ROW_71748"
+      },
+      {
+        "sender_account": "ACC_02155",
+        "receiver_account": "ACC_07491",
+        "amount": 4154.95,
+        "timestamp": "2026-05-15 10:26:00",
+        "transaction_ref": "SYNTH_ROW_88253"
+      },
+      {
+        "sender_account": "ACC_07491",
+        "receiver_account": "ACC_13268",
+        "amount": 7749.58,
+        "timestamp": "2026-05-28 05:13:00",
+        "transaction_ref": "SYNTH_ROW_95562"
+      },
+      {
+        "sender_account": "ACC_07804",
+        "receiver_account": "ACC_07491",
+        "amount": 64195.65,
+        "timestamp": "2026-05-11 07:21:58",
+        "transaction_ref": "SYNTH_ROW_100020"
+      },
+      {
+        "sender_account": "ACC_07491",
+        "receiver_account": "ACC_00027",
+        "amount": 55114.87,
+        "timestamp": "2026-05-12 07:00:52",
+        "transaction_ref": "SYNTH_ROW_100021"
+      }
+    ],
+    "decision": "Human review only",
+    "proposed_hold_amount": null,
+    "reason": "No complaint-linked seed, account balance, or verified fund allocation supplied."
+  },
+  {
+    "account_id": "ACC_03996",
+    "example_type": "false_positive",
+    "outer_fold": 2,
+    "score": 0.7911414517997063,
+    "baseline": 0.01717941506955103,
+    "review_flag": true,
+    "threshold": 0.7543185724890598,
+    "background_size": 24,
+    "contributions": [
+      {
+        "feature": "amount_std",
+        "value": 13853.75431561881,
+        "contribution": 0.37059021111380785
+      },
+      {
+        "feature": "amount_mean",
+        "value": 7442.15875,
+        "contribution": 0.22070639432462874
+      },
+      {
+        "feature": "spike_ratio",
+        "value": 5.5067758397387045,
+        "contribution": 0.1474183637324518
+      },
+      {
+        "feature": "fan_ratio_volume",
+        "value": 1.3333333333333333,
+        "contribution": 0.023751311572547788
+      },
+      {
+        "feature": "fan_ratio_structural",
+        "value": 1.3333333333333333,
+        "contribution": 0.01994079385182892
+      },
+      {
+        "feature": "passthrough_distance_7d",
+        "value": 0.8756730680968163,
+        "contribution": -0.010895696150659209
+      },
+      {
+        "feature": "passthrough_has_signal",
+        "value": 1.0,
+        "contribution": 0.002450658285550006
+      },
+      {
+        "feature": "round_amount_fraction",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "hub_score",
+        "value": 3.6565679401074957e-11,
+        "contribution": 0.0
+      },
+      {
+        "feature": "authority_score",
+        "value": 7.2759111140832e-13,
+        "contribution": 0.0
+      }
+    ],
+    "transactions": [
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_09107",
+        "amount": 40982.3,
+        "timestamp": "2026-05-25 19:54:00",
+        "transaction_ref": "SYNTH_ROW_10991"
+      },
+      {
+        "sender_account": "ACC_16148",
+        "receiver_account": "ACC_03996",
+        "amount": 57.95,
+        "timestamp": "2026-05-06 20:05:00",
+        "transaction_ref": "SYNTH_ROW_14770"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_17795",
+        "amount": 8856.18,
+        "timestamp": "2026-05-20 12:40:00",
+        "transaction_ref": "SYNTH_ROW_18682"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_04245",
+        "amount": 3081.77,
+        "timestamp": "2026-05-04 20:54:00",
+        "transaction_ref": "SYNTH_ROW_20436"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_19873",
+        "amount": 499.0,
+        "timestamp": "2026-05-19 09:44:00",
+        "transaction_ref": "SYNTH_ROW_27600"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_04707",
+        "amount": 3841.21,
+        "timestamp": "2026-05-15 19:03:00",
+        "transaction_ref": "SYNTH_ROW_41216"
+      },
+      {
+        "sender_account": "ACC_06892",
+        "receiver_account": "ACC_03996",
+        "amount": 12.85,
+        "timestamp": "2026-05-22 17:33:00",
+        "transaction_ref": "SYNTH_ROW_64565"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_04693",
+        "amount": 238.37,
+        "timestamp": "2026-05-15 18:26:00",
+        "transaction_ref": "SYNTH_ROW_67914"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_10710",
+        "amount": 2007.88,
+        "timestamp": "2026-05-02 10:17:00",
+        "transaction_ref": "SYNTH_ROW_68291"
+      },
+      {
+        "sender_account": "ACC_08221",
+        "receiver_account": "ACC_03996",
+        "amount": 152.85,
+        "timestamp": "2026-05-25 10:14:00",
+        "transaction_ref": "SYNTH_ROW_69218"
+      },
+      {
+        "sender_account": "ACC_05395",
+        "receiver_account": "ACC_03996",
+        "amount": 578.63,
+        "timestamp": "2026-05-06 10:49:00",
+        "transaction_ref": "SYNTH_ROW_81265"
+      },
+      {
+        "sender_account": "ACC_13561",
+        "receiver_account": "ACC_03996",
+        "amount": 148.51,
+        "timestamp": "2026-05-21 00:49:00",
+        "transaction_ref": "SYNTH_ROW_85366"
+      },
+      {
+        "sender_account": "ACC_03996",
+        "receiver_account": "ACC_03822",
+        "amount": 30.56,
+        "timestamp": "2026-05-01 20:15:00",
+        "transaction_ref": "SYNTH_ROW_89285"
+      },
+      {
+        "sender_account": "ACC_18966",
+        "receiver_account": "ACC_03996",
+        "amount": 110.77,
+        "timestamp": "2026-05-27 10:24:00",
+        "transaction_ref": "SYNTH_ROW_95969"
+      }
+    ],
+    "decision": "Human review only",
+    "proposed_hold_amount": null,
+    "reason": "No complaint-linked seed, account balance, or verified fund allocation supplied."
+  },
+  {
+    "account_id": "ACC_17345",
+    "example_type": "missed_positive",
+    "outer_fold": 1,
+    "score": 0.9391052420740115,
+    "baseline": 0.03810531668229568,
+    "review_flag": false,
+    "threshold": null,
+    "background_size": 24,
+    "contributions": [
+      {
+        "feature": "amount_std",
+        "value": 20756.97371669387,
+        "contribution": 0.4080379538886646
+      },
+      {
+        "feature": "amount_mean",
+        "value": 8755.54,
+        "contribution": 0.2918102941803115
+      },
+      {
+        "feature": "spike_ratio",
+        "value": 5.839104155768804,
+        "contribution": 0.13451513505573798
+      },
+      {
+        "feature": "fan_ratio_volume",
+        "value": 1.2,
+        "contribution": 0.027018737141022153
+      },
+      {
+        "feature": "fan_ratio_structural",
+        "value": 1.2,
+        "contribution": 0.02597472455647025
+      },
+      {
+        "feature": "passthrough_distance_7d",
+        "value": 0.0572914059508815,
+        "contribution": 0.01125082969866801
+      },
+      {
+        "feature": "passthrough_has_signal",
+        "value": 1.0,
+        "contribution": 0.002392250870841435
+      },
+      {
+        "feature": "round_amount_fraction",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "hub_score",
+        "value": 1.5341622147904527e-10,
+        "contribution": 0.0
+      },
+      {
+        "feature": "authority_score",
+        "value": 5.790473145664425e-13,
+        "contribution": 0.0
+      }
+    ],
+    "transactions": [
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_07760",
+        "amount": 402.01,
+        "timestamp": "2026-05-17 17:30:00",
+        "transaction_ref": "SYNTH_ROW_4698"
+      },
+      {
+        "sender_account": "ACC_18723",
+        "receiver_account": "ACC_17345",
+        "amount": 3104.41,
+        "timestamp": "2026-05-27 18:57:00",
+        "transaction_ref": "SYNTH_ROW_23950"
+      },
+      {
+        "sender_account": "ACC_16085",
+        "receiver_account": "ACC_17345",
+        "amount": 493.28,
+        "timestamp": "2026-05-23 10:39:00",
+        "transaction_ref": "SYNTH_ROW_31660"
+      },
+      {
+        "sender_account": "ACC_07361",
+        "receiver_account": "ACC_17345",
+        "amount": 305.17,
+        "timestamp": "2026-05-26 11:50:00",
+        "transaction_ref": "SYNTH_ROW_45332"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_00412",
+        "amount": 17.08,
+        "timestamp": "2026-05-02 21:43:00",
+        "transaction_ref": "SYNTH_ROW_55274"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_13531",
+        "amount": 239.31,
+        "timestamp": "2026-05-04 12:41:00",
+        "transaction_ref": "SYNTH_ROW_60161"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_17112",
+        "amount": 390.66,
+        "timestamp": "2026-05-22 23:32:00",
+        "transaction_ref": "SYNTH_ROW_83791"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_10621",
+        "amount": 359.67,
+        "timestamp": "2026-05-02 14:42:00",
+        "transaction_ref": "SYNTH_ROW_84369"
+      },
+      {
+        "sender_account": "ACC_11703",
+        "receiver_account": "ACC_17345",
+        "amount": 311.28,
+        "timestamp": "2026-05-04 19:23:00",
+        "transaction_ref": "SYNTH_ROW_91890"
+      },
+      {
+        "sender_account": "ACC_01201",
+        "receiver_account": "ACC_17345",
+        "amount": 54393.58,
+        "timestamp": "2026-05-03 14:29:27",
+        "transaction_ref": "SYNTH_ROW_100012"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_04203",
+        "amount": 51124.51,
+        "timestamp": "2026-05-04 05:59:58",
+        "transaction_ref": "SYNTH_ROW_100013"
+      }
+    ],
+    "decision": "Human review only",
+    "proposed_hold_amount": null,
+    "reason": "No complaint-linked seed, account balance, or verified fund allocation supplied."
+  },
+  {
+    "account_id": "ACC_17345",
+    "example_type": "highest_ranked_positive",
+    "outer_fold": 1,
+    "score": 0.9391052420740115,
+    "baseline": 0.038105316682295685,
+    "review_flag": false,
+    "threshold": null,
+    "background_size": 24,
+    "contributions": [
+      {
+        "feature": "amount_std",
+        "value": 20756.97371669387,
+        "contribution": 0.4080379538886646
+      },
+      {
+        "feature": "amount_mean",
+        "value": 8755.54,
+        "contribution": 0.2918102941803115
+      },
+      {
+        "feature": "spike_ratio",
+        "value": 5.839104155768804,
+        "contribution": 0.13451513505573798
+      },
+      {
+        "feature": "fan_ratio_volume",
+        "value": 1.2,
+        "contribution": 0.027018737141022167
+      },
+      {
+        "feature": "fan_ratio_structural",
+        "value": 1.2,
+        "contribution": 0.02597472455647025
+      },
+      {
+        "feature": "passthrough_distance_7d",
+        "value": 0.0572914059508815,
+        "contribution": 0.011250829698668008
+      },
+      {
+        "feature": "passthrough_has_signal",
+        "value": 1.0,
+        "contribution": 0.0023922508708414314
+      },
+      {
+        "feature": "round_amount_fraction",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "hub_score",
+        "value": 1.5341622147904527e-10,
+        "contribution": 0.0
+      },
+      {
+        "feature": "authority_score",
+        "value": 5.790473145664425e-13,
+        "contribution": 0.0
+      }
+    ],
+    "transactions": [
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_07760",
+        "amount": 402.01,
+        "timestamp": "2026-05-17 17:30:00",
+        "transaction_ref": "SYNTH_ROW_4698"
+      },
+      {
+        "sender_account": "ACC_18723",
+        "receiver_account": "ACC_17345",
+        "amount": 3104.41,
+        "timestamp": "2026-05-27 18:57:00",
+        "transaction_ref": "SYNTH_ROW_23950"
+      },
+      {
+        "sender_account": "ACC_16085",
+        "receiver_account": "ACC_17345",
+        "amount": 493.28,
+        "timestamp": "2026-05-23 10:39:00",
+        "transaction_ref": "SYNTH_ROW_31660"
+      },
+      {
+        "sender_account": "ACC_07361",
+        "receiver_account": "ACC_17345",
+        "amount": 305.17,
+        "timestamp": "2026-05-26 11:50:00",
+        "transaction_ref": "SYNTH_ROW_45332"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_00412",
+        "amount": 17.08,
+        "timestamp": "2026-05-02 21:43:00",
+        "transaction_ref": "SYNTH_ROW_55274"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_13531",
+        "amount": 239.31,
+        "timestamp": "2026-05-04 12:41:00",
+        "transaction_ref": "SYNTH_ROW_60161"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_17112",
+        "amount": 390.66,
+        "timestamp": "2026-05-22 23:32:00",
+        "transaction_ref": "SYNTH_ROW_83791"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_10621",
+        "amount": 359.67,
+        "timestamp": "2026-05-02 14:42:00",
+        "transaction_ref": "SYNTH_ROW_84369"
+      },
+      {
+        "sender_account": "ACC_11703",
+        "receiver_account": "ACC_17345",
+        "amount": 311.28,
+        "timestamp": "2026-05-04 19:23:00",
+        "transaction_ref": "SYNTH_ROW_91890"
+      },
+      {
+        "sender_account": "ACC_01201",
+        "receiver_account": "ACC_17345",
+        "amount": 54393.58,
+        "timestamp": "2026-05-03 14:29:27",
+        "transaction_ref": "SYNTH_ROW_100012"
+      },
+      {
+        "sender_account": "ACC_17345",
+        "receiver_account": "ACC_04203",
+        "amount": 51124.51,
+        "timestamp": "2026-05-04 05:59:58",
+        "transaction_ref": "SYNTH_ROW_100013"
+      }
+    ],
+    "decision": "Human review only",
+    "proposed_hold_amount": null,
+    "reason": "No complaint-linked seed, account balance, or verified fund allocation supplied."
+  },
+  {
+    "account_id": "ACC_00154",
+    "example_type": "highest_ranked_negative",
+    "outer_fold": 1,
+    "score": 0.9367029110245398,
+    "baseline": 0.038105316682295685,
+    "review_flag": false,
+    "threshold": null,
+    "background_size": 24,
+    "contributions": [
+      {
+        "feature": "amount_std",
+        "value": 20212.80112614445,
+        "contribution": 0.40708584494502353
+      },
+      {
+        "feature": "amount_mean",
+        "value": 8474.843333333332,
+        "contribution": 0.25213835757896375
+      },
+      {
+        "feature": "spike_ratio",
+        "value": 5.868358628458422,
+        "contribution": 0.17716030891882445
+      },
+      {
+        "feature": "fan_ratio_structural",
+        "value": 1.5,
+        "contribution": 0.02821846588368078
+      },
+      {
+        "feature": "fan_ratio_volume",
+        "value": 1.5,
+        "contribution": 0.026002790921440165
+      },
+      {
+        "feature": "passthrough_distance_7d",
+        "value": null,
+        "contribution": 0.005527703598509964
+      },
+      {
+        "feature": "passthrough_has_signal",
+        "value": 0.0,
+        "contribution": 0.0024641224958016363
+      },
+      {
+        "feature": "round_amount_fraction",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "hub_score",
+        "value": 1.268478928557475e-12,
+        "contribution": 0.0
+      },
+      {
+        "feature": "authority_score",
+        "value": 2.270580645121614e-16,
+        "contribution": 0.0
+      }
+    ],
+    "transactions": [
+      {
+        "sender_account": "ACC_00154",
+        "receiver_account": "ACC_14823",
+        "amount": 309.39,
+        "timestamp": "2026-05-11 11:30:00",
+        "transaction_ref": "SYNTH_ROW_6008"
+      },
+      {
+        "sender_account": "ACC_13107",
+        "receiver_account": "ACC_00154",
+        "amount": 157.21,
+        "timestamp": "2026-05-22 19:17:00",
+        "transaction_ref": "SYNTH_ROW_18085"
+      },
+      {
+        "sender_account": "ACC_00154",
+        "receiver_account": "ACC_05414",
+        "amount": 13.56,
+        "timestamp": "2026-05-07 04:44:00",
+        "transaction_ref": "SYNTH_ROW_20632"
+      },
+      {
+        "sender_account": "ACC_12579",
+        "receiver_account": "ACC_00154",
+        "amount": 168.57,
+        "timestamp": "2026-05-02 11:52:00",
+        "transaction_ref": "SYNTH_ROW_20708"
+      },
+      {
+        "sender_account": "ACC_00154",
+        "receiver_account": "ACC_07270",
+        "amount": 49733.42,
+        "timestamp": "2026-05-15 21:50:00",
+        "transaction_ref": "SYNTH_ROW_43199"
+      },
+      {
+        "sender_account": "ACC_00154",
+        "receiver_account": "ACC_17476",
+        "amount": 317.05,
+        "timestamp": "2026-05-17 18:04:00",
+        "transaction_ref": "SYNTH_ROW_60529"
+      },
+      {
+        "sender_account": "ACC_00154",
+        "receiver_account": "ACC_09392",
+        "amount": 207.36,
+        "timestamp": "2026-05-03 10:13:00",
+        "transaction_ref": "SYNTH_ROW_72703"
+      },
+      {
+        "sender_account": "ACC_04410",
+        "receiver_account": "ACC_00154",
+        "amount": 10067.07,
+        "timestamp": "2026-05-15 18:55:00",
+        "transaction_ref": "SYNTH_ROW_85515"
+      },
+      {
+        "sender_account": "ACC_02680",
+        "receiver_account": "ACC_00154",
+        "amount": 98.77,
+        "timestamp": "2026-05-28 17:16:00",
+        "transaction_ref": "SYNTH_ROW_86672"
+      },
+      {
+        "sender_account": "ACC_00154",
+        "receiver_account": "ACC_15704",
+        "amount": 268.28,
+        "timestamp": "2026-05-08 09:45:00",
+        "transaction_ref": "SYNTH_ROW_87089"
+      }
+    ],
+    "decision": "Human review only",
+    "proposed_hold_amount": null,
+    "reason": "No complaint-linked seed, account balance, or verified fund allocation supplied."
+  }
+]

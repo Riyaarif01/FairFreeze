@@ -1,0 +1,76 @@
+{
+  "seed": 2026,
+  "accounts": 20000,
+  "positive_accounts": 125,
+  "transactions": 100203,
+  "results": {
+    "RF": {
+      "average_precision": 0.07732464725431938,
+      "threshold": 0.7947589865858564,
+      "tp": 17,
+      "fp": 60,
+      "fn": 108,
+      "tn": 19815,
+      "flagged": 77,
+      "precision": 0.22077922077922077,
+      "recall": 0.136,
+      "scenarios": {
+        "high_value_fraud": {
+          "accounts": 61,
+          "flagged": 17,
+          "mean_score": 0.4992072325877837
+        },
+        "legitimate_large_chain": {
+          "accounts": 71,
+          "flagged": 20,
+          "mean_score": 0.5046229062163671
+        },
+        "legitimate_round_chain": {
+          "accounts": 67,
+          "flagged": 28,
+          "mean_score": 0.49358921930006366
+        },
+        "low_value_fraud": {
+          "accounts": 64,
+          "flagged": 0,
+          "mean_score": 0.03565777000441969
+        }
+      }
+    },
+    "LR": {
+      "average_precision": 0.07430938431530915,
+      "threshold": 0.9982582359485344,
+      "tp": 8,
+      "fp": 45,
+      "fn": 117,
+      "tn": 19830,
+      "flagged": 53,
+      "precision": 0.1509433962264151,
+      "recall": 0.064,
+      "scenarios": {
+        "high_value_fraud": {
+          "accounts": 61,
+          "flagged": 8,
+          "mean_score": 0.7600317734833724
+        },
+        "legitimate_large_chain": {
+          "accounts": 71,
+          "flagged": 17,
+          "mean_score": 0.765309216554553
+        },
+        "legitimate_round_chain": {
+          "accounts": 67,
+          "flagged": 24,
+          "mean_score": 0.7546786144328497
+        },
+        "low_value_fraud": {
+          "accounts": 64,
+          "flagged": 0,
+          "mean_score": 0.1452067207858687
+        }
+      }
+    }
+  },
+  "scope": "Independent synthetic IDs, topology and sampled transactions; background amounts bootstrapped from original non-chain marginal distribution. All features recomputed. Original models trained on full development snapshot; thresholds from development OOF predictions. Stress labels not used in fitting.",
+  "limitation": "Legitimate chains deliberately share observable fraud patterns. Labels alone cannot make identical behavior identifiable. This is generator stress testing, not real-world accuracy."
+}
